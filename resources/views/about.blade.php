@@ -6,7 +6,7 @@
         <p class="lead"> </p>
         <div class="jumbotron">
             <h1>About Me</h1>
-            <p>I&#39;m a software engineer based out of Philadelphia PA. I have a passion for the factors involved in improving developer work flow and rapid development. </p>
+            <p>I&#39;m a software engineer based out of Philadelphia PA. I have a passion for improving the development process and creating clean, maintainable solutions.</p>
             <p>
                 <a class="btn btn-default" role="button" href="#"> </a>
             </p>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Project;
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -25,7 +26,8 @@ Route::get('/contact', function(){
 });
 
 Route::get('/projects', function(){
-    return view('projects');
+    $projects = Project::where('active', 1)->get();
+    return view('projects', ['projects' => $projects]);
 });
 
 /*
