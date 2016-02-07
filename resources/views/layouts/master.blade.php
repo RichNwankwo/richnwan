@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./embed/bootstrap/fonts/font-awesome.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather" />
+    <script type="text/javascript" src="/js/vue.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 </head>
 
 <body>
@@ -19,4 +21,5 @@
     </div>
 </div>
 </body>
+<script  type="text/javascript" src="/js/contactValidation.js"></script>
 </html>

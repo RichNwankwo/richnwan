@@ -1,6 +1,10 @@
 <?php
 
 use App\Models\Project;
+use Illuminate\HTTP\Request;
+use Illuminate\Validation\Validator;
+use App\Models\Contact;
+//use Mail;
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -29,6 +33,38 @@ Route::get('/projects', function(){
     $projects = Project::where('active', 1)->get();
     return view('projects', ['projects' => $projects]);
 });
+
+Route::post('/contact',function(Request $request){
+
+    $name = $request->input('name');
+    $email = $request->input('email');
+    $message = $request->input('message');
+
+    if($email && $name && $message)
+    {
+        $contactData = [
+            'name' => $name,
+            'email' => $email,
+            'message' => $message
+        ];
+        Contact::create($contactData);
+    }
+
+    return view('mailSent');
+
+    // TODO send mail using a web service
+
+//    Mail::send('emails.contact', ['contactData' => $contactData], function($message){
+//
+//        $message->from('');
+//        $message->to('');
+//
+//    });
+
+
+
+});
+
 
 /*
 |--------------------------------------------------------------------------
