@@ -15,7 +15,7 @@
                 <label for="textarea-input" class="control-label">Message</label>
                 <textarea v-on:change="validateMessage" name="message" v-model="message" class="form-control" id="textarea-input"></textarea><span id="messageValidation" aria-hidden="true" v-bind:class="{'glyphicon-ok':messagePass, 'glyphicon-remove': messageFail}" class="glyphicon form-control-feedback"></span></div>
             <div class="form-group has-warning">
-                <button class="btn btn-primary" type="submit">Send</button>
+                <button  class="btn btn-primary pjax" type="submit">Send</button>
             </div>
         </form>
     </div>
