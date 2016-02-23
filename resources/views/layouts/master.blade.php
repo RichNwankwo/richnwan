@@ -24,11 +24,6 @@
 </body>
 <script>
     $(document).pjax('a.pjaxMain', '#pjax-container',{ fragment: '#pjax-container'});
-    // TODO  Needs to be fixed
-    $(document).on('submit', 'form', function(e){
-        e.preventDefault();
-        $.pjax.submit(e,'#pjax-container',{timeout: 5000,fragment: '#pjax-container'});
-    });
 </script>
 <script  type="text/javascript" src="/js/contactValidation.js"></script>
 </html>

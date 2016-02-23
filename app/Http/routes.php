@@ -5,6 +5,7 @@ use Illuminate\HTTP\Request;
 use Illuminate\Validation\Validator;
 use App\Models\Contact;
 //use Mail;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 /*
 |--------------------------------------------------------------------------
 | Routes File
@@ -50,16 +51,11 @@ Route::post('/contact',function(Request $request){
         Contact::create($contactData);
     }
 
+    dispatch(new \App\Jobs\SendContactEmail($name, $email, $message));
     return view('mailSent');
 
-    // TODO send mail using a web service
 
-//    Mail::send('emails.contact', ['contactData' => $contactData], function($message){
-//
-//        $message->from('');
-//        $message->to('');
-//
-//    });
+
 
 
 
